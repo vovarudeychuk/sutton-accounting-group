@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import "./Vender"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import $ from 'jquery';
+// import $ from 'jquery';
 import { Route, Routes, useLocation, Outlet } from 'react-router-dom'
 import Landing1 from './Pages/Home/Landing1/Landing1'
 import Landing2 from './Pages/Home/Landing2/Landing2'
@@ -11,8 +11,8 @@ import Landing4 from './Pages/Home/Landing4/Langing4'
 import Header1 from './Layout/Header/Header1'
 import Footer1 from './Layout/Footer/Footer1'
 import HomePage from './defaultPages/HomePage'
-import Login from './defaultPages/Login/Login'
-import Signup from './defaultPages/Signup/Signup'
+// import Login from './defaultPages/Login/Login'
+// import Signup from './defaultPages/Signup/Signup'
 import AboutUs from './Pages/Company/AboutUs'
 import ProductGrid from './Pages/Shop/ProductGrid'
 import ProductList from './Pages/Shop/ProductList';
@@ -37,7 +37,7 @@ import Career from './Pages/Company/Career';
 import CareerSingle from './Pages/Company/CareerSingle';
 import Contact1 from './Pages/Contact/Contact1';
 import Contact2 from './Pages/Contact/Contact2';
-import Signin2 from './defaultPages/SignIn2';
+// import Signin2 from './defaultPages/SignIn2';
 import Forgotpassword from './defaultPages/ForgetPassword';
 import FAQ from './Pages/Utilities/FaqPage';
 import Pricing from './Pages/Utilities/PricingPage';
@@ -68,14 +68,14 @@ function App() {
     return `/${pathArray[1]}` === '/index4' ? true : false;
   }
 
-  const setFooter = (pathname) => {
-    let pathArray = pathname.split('/');
-    return `/${pathArray[1]}` === '/index10' ? false : true;
-  };
-  const scrollbarStyle = `
-  ::-webkit-scrollbar {
-    display: none;
-  }`;
+  // const setFooter = (pathname) => {
+  //   let pathArray = pathname.split('/');
+  //   return `/${pathArray[1]}` === '/index10' ? false : true;
+  // };
+  // const scrollbarStyle = `
+  // ::-webkit-scrollbar {
+  //   display: none;
+  // }`;
 
   useEffect(() => {
     const handlePopstate = () => {
@@ -123,8 +123,6 @@ function App() {
           <Routes>
             {/* difaultHompage */}
             <Route path='/' element={<HomePage />} />
-            <Route path='/Login' element={<Login />} />
-            <Route path='/Signup' element={<Signup />} />
             {/* difaultHompage */}
 
             {/* NavbarHome */}
@@ -145,9 +143,6 @@ function App() {
             <Route path='/career-single' element={<CareerSingle />} />
             <Route path='/contact1' element={<Contact1 />} />
             <Route path='/contact2' element={<Contact2 />} />
-            <Route path='/sign_in' element={<Login />} />
-            <Route path='/sign_up' element={<Signup />} />
-            <Route path='/sign_in_2' element={<Signin2 />} />
             <Route path='/forgot_password' element={<Forgotpassword />} />
 
             <Route path='/faq' element={<FAQ />} />

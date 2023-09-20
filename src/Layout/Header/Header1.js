@@ -102,7 +102,7 @@ const Header1 = () => {
                                     >
                                         <Nav className="mx-auto" navbar>
                                             {navLinks.map((navLink, index) => (
-                                                <NavItem key={index}>
+                                                <NavItem key={index} to={navLink.path} tag={Link} >
                                                     {navLink.type && navLink.type === "subMenu" ? (
                                                         <UncontrolledDropdown nav inNavbar isOpen={openMenus.includes(index)}
                                                             toggle={() => toggleMenu(index)}
@@ -176,10 +176,7 @@ const Header1 = () => {
                                             ))}
                                         </Nav>
                                     </Collapse>
-                                    <div className="d-sm-flex align-items-center justify-content-end">
-                                        <Link className="btn-link" to="login">Login</Link>
-                                        <Link className="btn btn-primary btn-sm ms-3 d-sm-inline-block d-none" to="signup">Sign Up</Link>
-                                    </div>
+
                                 </Navbar>
                             </div>
                         </div>
